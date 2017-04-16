@@ -1,5 +1,7 @@
-<html lang="en"><head>
-    <title>Code coverage report for node-npmtest-lru-cache/lru-cache/lib/lru-cache.js</title>
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for node-npmtest-lru-cache/node_modules/lru-cache/lib/lru-cache.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -192,7 +194,7 @@
     <h1 style="font-weight: bold;">
         <a href="https://github.com/npmtest/node-npmtest-lru-cache">npmtest-lru-cache (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-lru-cache/lru-cache/lib/lru-cache.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-lru-cache/node_modules/lru-cache/lib/lru-cache.js</span></h1>
     <h2>
         
         Statements: <span class="metric">15.47% <small>(41 / 265)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -208,11 +210,11 @@
         
         Ignored: <span class="metric">1 statement, 1 function</span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../../index.html">All files</a> » <a href="index.html">node-npmtest-lru-cache/lru-cache/lib/</a> » lru-cache.js</div>
+    <div class="path"><a href="../../../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-lru-cache/node_modules/lru-cache/lib/</a> &#187; lru-cache.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tbody><tr><td class="line-count">1
+<tr><td class="line-count">1
 2
 3
 4
@@ -1167,33 +1169,33 @@ var symbols = {}
 var hasSymbol = typeof Symbol === 'function'
 var makeSymbol
 /* istanbul ignore if */
-<span class="missing-if-branch" title="else path not taken">E</span>if (hasSymbol) {
-  makeSymbol = <span class="fstat-skip" title="function not covered">function (key) {</span>
-<span class="cstat-skip" title="statement not covered">    return Symbol.for(key)</span>
+<span class="missing-if-branch" title="else path not taken" >E</span>if (hasSymbol) {
+  makeSymbol = <span class="fstat-skip" title="function not covered" >function (key) {</span>
+<span class="cstat-skip" title="statement not covered" >    return Symbol.for(key)</span>
   }
 } else {
-<span class="cstat-no" title="statement not covered">  makeSymbol = <span class="fstat-no" title="function not covered">function (key) {</span></span>
-<span class="cstat-no" title="statement not covered">    return '_' + key</span>
+<span class="cstat-no" title="statement not covered" >  makeSymbol = <span class="fstat-no" title="function not covered" >function (key) {</span></span>
+<span class="cstat-no" title="statement not covered" >    return '_' + key</span>
   }
 }
 &nbsp;
-<span class="fstat-no" title="function not covered">function priv (obj, key, val) {</span>
-<span class="cstat-no" title="statement not covered">  var sym</span>
-<span class="cstat-no" title="statement not covered">  if (symbols[key]) {</span>
-<span class="cstat-no" title="statement not covered">    sym = symbols[key]</span>
+<span class="fstat-no" title="function not covered" >function priv (obj, key, val) {</span>
+<span class="cstat-no" title="statement not covered" >  var sym</span>
+<span class="cstat-no" title="statement not covered" >  if (symbols[key]) {</span>
+<span class="cstat-no" title="statement not covered" >    sym = symbols[key]</span>
   } else {
-<span class="cstat-no" title="statement not covered">    sym = makeSymbol(key)</span>
-<span class="cstat-no" title="statement not covered">    symbols[key] = sym</span>
+<span class="cstat-no" title="statement not covered" >    sym = makeSymbol(key)</span>
+<span class="cstat-no" title="statement not covered" >    symbols[key] = sym</span>
   }
-<span class="cstat-no" title="statement not covered">  if (arguments.length === 2) {</span>
-<span class="cstat-no" title="statement not covered">    return obj[sym]</span>
+<span class="cstat-no" title="statement not covered" >  if (arguments.length === 2) {</span>
+<span class="cstat-no" title="statement not covered" >    return obj[sym]</span>
   } else {
-<span class="cstat-no" title="statement not covered">    obj[sym] = val</span>
-<span class="cstat-no" title="statement not covered">    return val</span>
+<span class="cstat-no" title="statement not covered" >    obj[sym] = val</span>
+<span class="cstat-no" title="statement not covered" >    return val</span>
   }
 }
 &nbsp;
-<span class="fstat-no" title="function not covered">function naiveLength () {</span> <span class="cstat-no" title="statement not covered">return 1 }</span>
+<span class="fstat-no" title="function not covered" >function naiveLength () {</span> <span class="cstat-no" title="statement not covered" >return 1 }</span>
 &nbsp;
 // lruList is a yallist where the head is the youngest
 // item, and the tail is the oldest.  the list contains the Hit
@@ -1203,431 +1205,430 @@ var makeSymbol
 //
 // cache is a Map (or PseudoMap) that matches the keys to
 // the Yallist.Node object.
-<span class="fstat-no" title="function not covered">function LRUCache (options) {</span>
-<span class="cstat-no" title="statement not covered">  if (!(this instanceof LRUCache)) {</span>
-<span class="cstat-no" title="statement not covered">    return new LRUCache(options)</span>
+<span class="fstat-no" title="function not covered" >function LRUCache (options) {</span>
+<span class="cstat-no" title="statement not covered" >  if (!(this instanceof LRUCache)) {</span>
+<span class="cstat-no" title="statement not covered" >    return new LRUCache(options)</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered">  if (typeof options === 'number') {</span>
-<span class="cstat-no" title="statement not covered">    options = { max: options }</span>
+<span class="cstat-no" title="statement not covered" >  if (typeof options === 'number') {</span>
+<span class="cstat-no" title="statement not covered" >    options = { max: options }</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered">  if (!options) {</span>
-<span class="cstat-no" title="statement not covered">    options = {}</span>
+<span class="cstat-no" title="statement not covered" >  if (!options) {</span>
+<span class="cstat-no" title="statement not covered" >    options = {}</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered">  var max = priv(this, 'max', options.max)</span>
+<span class="cstat-no" title="statement not covered" >  var max = priv(this, 'max', options.max)</span>
   // Kind of weird to have a default max of Infinity, but oh well.
-<span class="cstat-no" title="statement not covered">  if (!max ||</span>
+<span class="cstat-no" title="statement not covered" >  if (!max ||</span>
       !(typeof max === 'number') ||
       max &lt;= 0) {
-<span class="cstat-no" title="statement not covered">    priv(this, 'max', Infinity)</span>
+<span class="cstat-no" title="statement not covered" >    priv(this, 'max', Infinity)</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered">  var lc = options.length || naiveLength</span>
-<span class="cstat-no" title="statement not covered">  if (typeof lc !== 'function') {</span>
-<span class="cstat-no" title="statement not covered">    lc = naiveLength</span>
+<span class="cstat-no" title="statement not covered" >  var lc = options.length || naiveLength</span>
+<span class="cstat-no" title="statement not covered" >  if (typeof lc !== 'function') {</span>
+<span class="cstat-no" title="statement not covered" >    lc = naiveLength</span>
   }
-<span class="cstat-no" title="statement not covered">  priv(this, 'lengthCalculator', lc)</span>
+<span class="cstat-no" title="statement not covered" >  priv(this, 'lengthCalculator', lc)</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">  priv(this, 'allowStale', options.stale || false)</span>
-<span class="cstat-no" title="statement not covered">  priv(this, 'maxAge', options.maxAge || 0)</span>
-<span class="cstat-no" title="statement not covered">  priv(this, 'dispose', options.dispose)</span>
-<span class="cstat-no" title="statement not covered">  this.reset()</span>
+<span class="cstat-no" title="statement not covered" >  priv(this, 'allowStale', options.stale || false)</span>
+<span class="cstat-no" title="statement not covered" >  priv(this, 'maxAge', options.maxAge || 0)</span>
+<span class="cstat-no" title="statement not covered" >  priv(this, 'dispose', options.dispose)</span>
+<span class="cstat-no" title="statement not covered" >  this.reset()</span>
 }
 &nbsp;
 // resize the cache when the max changes.
 Object.defineProperty(LRUCache.prototype, 'max', {
-  set: <span class="fstat-no" title="function not covered">function (mL) {</span>
-<span class="cstat-no" title="statement not covered">    if (!mL || !(typeof mL === 'number') || mL &lt;= 0) {</span>
-<span class="cstat-no" title="statement not covered">      mL = Infinity</span>
+  set: <span class="fstat-no" title="function not covered" >function (mL) {</span>
+<span class="cstat-no" title="statement not covered" >    if (!mL || !(typeof mL === 'number') || mL &lt;= 0) {</span>
+<span class="cstat-no" title="statement not covered" >      mL = Infinity</span>
     }
-<span class="cstat-no" title="statement not covered">    priv(this, 'max', mL)</span>
-<span class="cstat-no" title="statement not covered">    trim(this)</span>
+<span class="cstat-no" title="statement not covered" >    priv(this, 'max', mL)</span>
+<span class="cstat-no" title="statement not covered" >    trim(this)</span>
   },
-  get: <span class="fstat-no" title="function not covered">function () {</span>
-<span class="cstat-no" title="statement not covered">    return priv(this, 'max')</span>
+  get: <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >    return priv(this, 'max')</span>
   },
   enumerable: true
 })
 &nbsp;
 Object.defineProperty(LRUCache.prototype, 'allowStale', {
-  set: <span class="fstat-no" title="function not covered">function (allowStale) {</span>
-<span class="cstat-no" title="statement not covered">    priv(this, 'allowStale', !!allowStale)</span>
+  set: <span class="fstat-no" title="function not covered" >function (allowStale) {</span>
+<span class="cstat-no" title="statement not covered" >    priv(this, 'allowStale', !!allowStale)</span>
   },
-  get: <span class="fstat-no" title="function not covered">function () {</span>
-<span class="cstat-no" title="statement not covered">    return priv(this, 'allowStale')</span>
+  get: <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >    return priv(this, 'allowStale')</span>
   },
   enumerable: true
 })
 &nbsp;
 Object.defineProperty(LRUCache.prototype, 'maxAge', {
-  set: <span class="fstat-no" title="function not covered">function (mA) {</span>
-<span class="cstat-no" title="statement not covered">    if (!mA || !(typeof mA === 'number') || mA &lt; 0) {</span>
-<span class="cstat-no" title="statement not covered">      mA = 0</span>
+  set: <span class="fstat-no" title="function not covered" >function (mA) {</span>
+<span class="cstat-no" title="statement not covered" >    if (!mA || !(typeof mA === 'number') || mA &lt; 0) {</span>
+<span class="cstat-no" title="statement not covered" >      mA = 0</span>
     }
-<span class="cstat-no" title="statement not covered">    priv(this, 'maxAge', mA)</span>
-<span class="cstat-no" title="statement not covered">    trim(this)</span>
+<span class="cstat-no" title="statement not covered" >    priv(this, 'maxAge', mA)</span>
+<span class="cstat-no" title="statement not covered" >    trim(this)</span>
   },
-  get: <span class="fstat-no" title="function not covered">function () {</span>
-<span class="cstat-no" title="statement not covered">    return priv(this, 'maxAge')</span>
+  get: <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >    return priv(this, 'maxAge')</span>
   },
   enumerable: true
 })
 &nbsp;
 // resize the cache when the lengthCalculator changes.
 Object.defineProperty(LRUCache.prototype, 'lengthCalculator', {
-  set: <span class="fstat-no" title="function not covered">function (lC) {</span>
-<span class="cstat-no" title="statement not covered">    if (typeof lC !== 'function') {</span>
-<span class="cstat-no" title="statement not covered">      lC = naiveLength</span>
+  set: <span class="fstat-no" title="function not covered" >function (lC) {</span>
+<span class="cstat-no" title="statement not covered" >    if (typeof lC !== 'function') {</span>
+<span class="cstat-no" title="statement not covered" >      lC = naiveLength</span>
     }
-<span class="cstat-no" title="statement not covered">    if (lC !== priv(this, 'lengthCalculator')) {</span>
-<span class="cstat-no" title="statement not covered">      priv(this, 'lengthCalculator', lC)</span>
-<span class="cstat-no" title="statement not covered">      priv(this, 'length', 0)</span>
-<span class="cstat-no" title="statement not covered">      priv(this, 'lruList').forEach(<span class="fstat-no" title="function not covered">function (hit) {</span></span>
-<span class="cstat-no" title="statement not covered">        hit.length = priv(this, 'lengthCalculator').call(this, hit.value, hit.key)</span>
-<span class="cstat-no" title="statement not covered">        priv(this, 'length', priv(this, 'length') + hit.length)</span>
+<span class="cstat-no" title="statement not covered" >    if (lC !== priv(this, 'lengthCalculator')) {</span>
+<span class="cstat-no" title="statement not covered" >      priv(this, 'lengthCalculator', lC)</span>
+<span class="cstat-no" title="statement not covered" >      priv(this, 'length', 0)</span>
+<span class="cstat-no" title="statement not covered" >      priv(this, 'lruList').forEach(<span class="fstat-no" title="function not covered" >function (hit) {</span></span>
+<span class="cstat-no" title="statement not covered" >        hit.length = priv(this, 'lengthCalculator').call(this, hit.value, hit.key)</span>
+<span class="cstat-no" title="statement not covered" >        priv(this, 'length', priv(this, 'length') + hit.length)</span>
       }, this)
     }
-<span class="cstat-no" title="statement not covered">    trim(this)</span>
+<span class="cstat-no" title="statement not covered" >    trim(this)</span>
   },
-  get: <span class="fstat-no" title="function not covered">function () {</span> <span class="cstat-no" title="statement not covered">return priv(this, 'lengthCalculator') }</span>,
+  get: <span class="fstat-no" title="function not covered" >function () {</span> <span class="cstat-no" title="statement not covered" >return priv(this, 'lengthCalculator') }</span>,
   enumerable: true
 })
 &nbsp;
 Object.defineProperty(LRUCache.prototype, 'length', {
-  get: <span class="fstat-no" title="function not covered">function () {</span> <span class="cstat-no" title="statement not covered">return priv(this, 'length') }</span>,
+  get: <span class="fstat-no" title="function not covered" >function () {</span> <span class="cstat-no" title="statement not covered" >return priv(this, 'length') }</span>,
   enumerable: true
 })
 &nbsp;
 Object.defineProperty(LRUCache.prototype, 'itemCount', {
-  get: <span class="fstat-no" title="function not covered">function () {</span> <span class="cstat-no" title="statement not covered">return priv(this, 'lruList').length }</span>,
+  get: <span class="fstat-no" title="function not covered" >function () {</span> <span class="cstat-no" title="statement not covered" >return priv(this, 'lruList').length }</span>,
   enumerable: true
 })
 &nbsp;
-LRUCache.prototype.rforEach = <span class="fstat-no" title="function not covered">function (fn, thisp) {</span>
-<span class="cstat-no" title="statement not covered">  thisp = thisp || this</span>
-<span class="cstat-no" title="statement not covered">  for (var walker = priv(this, 'lruList').tail; walker !== null;) {</span>
-<span class="cstat-no" title="statement not covered">    var prev = walker.prev</span>
-<span class="cstat-no" title="statement not covered">    forEachStep(this, fn, walker, thisp)</span>
-<span class="cstat-no" title="statement not covered">    walker = prev</span>
+LRUCache.prototype.rforEach = <span class="fstat-no" title="function not covered" >function (fn, thisp) {</span>
+<span class="cstat-no" title="statement not covered" >  thisp = thisp || this</span>
+<span class="cstat-no" title="statement not covered" >  for (var walker = priv(this, 'lruList').tail; walker !== null;) {</span>
+<span class="cstat-no" title="statement not covered" >    var prev = walker.prev</span>
+<span class="cstat-no" title="statement not covered" >    forEachStep(this, fn, walker, thisp)</span>
+<span class="cstat-no" title="statement not covered" >    walker = prev</span>
   }
 }
 &nbsp;
-<span class="fstat-no" title="function not covered">function forEachStep (self, fn, node, thisp) {</span>
-<span class="cstat-no" title="statement not covered">  var hit = node.value</span>
-<span class="cstat-no" title="statement not covered">  if (isStale(self, hit)) {</span>
-<span class="cstat-no" title="statement not covered">    del(self, node)</span>
-<span class="cstat-no" title="statement not covered">    if (!priv(self, 'allowStale')) {</span>
-<span class="cstat-no" title="statement not covered">      hit = undefined</span>
+<span class="fstat-no" title="function not covered" >function forEachStep (self, fn, node, thisp) {</span>
+<span class="cstat-no" title="statement not covered" >  var hit = node.value</span>
+<span class="cstat-no" title="statement not covered" >  if (isStale(self, hit)) {</span>
+<span class="cstat-no" title="statement not covered" >    del(self, node)</span>
+<span class="cstat-no" title="statement not covered" >    if (!priv(self, 'allowStale')) {</span>
+<span class="cstat-no" title="statement not covered" >      hit = undefined</span>
     }
   }
-<span class="cstat-no" title="statement not covered">  if (hit) {</span>
-<span class="cstat-no" title="statement not covered">    fn.call(thisp, hit.value, hit.key, self)</span>
+<span class="cstat-no" title="statement not covered" >  if (hit) {</span>
+<span class="cstat-no" title="statement not covered" >    fn.call(thisp, hit.value, hit.key, self)</span>
   }
 }
 &nbsp;
-LRUCache.prototype.forEach = <span class="fstat-no" title="function not covered">function (fn, thisp) {</span>
-<span class="cstat-no" title="statement not covered">  thisp = thisp || this</span>
-<span class="cstat-no" title="statement not covered">  for (var walker = priv(this, 'lruList').head; walker !== null;) {</span>
-<span class="cstat-no" title="statement not covered">    var next = walker.next</span>
-<span class="cstat-no" title="statement not covered">    forEachStep(this, fn, walker, thisp)</span>
-<span class="cstat-no" title="statement not covered">    walker = next</span>
+LRUCache.prototype.forEach = <span class="fstat-no" title="function not covered" >function (fn, thisp) {</span>
+<span class="cstat-no" title="statement not covered" >  thisp = thisp || this</span>
+<span class="cstat-no" title="statement not covered" >  for (var walker = priv(this, 'lruList').head; walker !== null;) {</span>
+<span class="cstat-no" title="statement not covered" >    var next = walker.next</span>
+<span class="cstat-no" title="statement not covered" >    forEachStep(this, fn, walker, thisp)</span>
+<span class="cstat-no" title="statement not covered" >    walker = next</span>
   }
 }
 &nbsp;
-LRUCache.prototype.keys = <span class="fstat-no" title="function not covered">function () {</span>
-<span class="cstat-no" title="statement not covered">  return priv(this, 'lruList').toArray().map(<span class="fstat-no" title="function not covered">function (k) {</span></span>
-<span class="cstat-no" title="statement not covered">    return k.key</span>
+LRUCache.prototype.keys = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >  return priv(this, 'lruList').toArray().map(<span class="fstat-no" title="function not covered" >function (k) {</span></span>
+<span class="cstat-no" title="statement not covered" >    return k.key</span>
   }, this)
 }
 &nbsp;
-LRUCache.prototype.values = <span class="fstat-no" title="function not covered">function () {</span>
-<span class="cstat-no" title="statement not covered">  return priv(this, 'lruList').toArray().map(<span class="fstat-no" title="function not covered">function (k) {</span></span>
-<span class="cstat-no" title="statement not covered">    return k.value</span>
+LRUCache.prototype.values = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >  return priv(this, 'lruList').toArray().map(<span class="fstat-no" title="function not covered" >function (k) {</span></span>
+<span class="cstat-no" title="statement not covered" >    return k.value</span>
   }, this)
 }
 &nbsp;
-LRUCache.prototype.reset = <span class="fstat-no" title="function not covered">function () {</span>
-<span class="cstat-no" title="statement not covered">  if (priv(this, 'dispose') &amp;&amp;</span>
+LRUCache.prototype.reset = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >  if (priv(this, 'dispose') &amp;&amp;</span>
       priv(this, 'lruList') &amp;&amp;
       priv(this, 'lruList').length) {
-<span class="cstat-no" title="statement not covered">    priv(this, 'lruList').forEach(<span class="fstat-no" title="function not covered">function (hit) {</span></span>
-<span class="cstat-no" title="statement not covered">      priv(this, 'dispose').call(this, hit.key, hit.value)</span>
+<span class="cstat-no" title="statement not covered" >    priv(this, 'lruList').forEach(<span class="fstat-no" title="function not covered" >function (hit) {</span></span>
+<span class="cstat-no" title="statement not covered" >      priv(this, 'dispose').call(this, hit.key, hit.value)</span>
     }, this)
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered">  priv(this, 'cache', new Map()) </span>// hash of items by key
-<span class="cstat-no" title="statement not covered">  priv(this, 'lruList', new Yallist()) </span>// list of items in order of use recency
-<span class="cstat-no" title="statement not covered">  priv(this, 'length', 0) </span>// length of items in the list
+<span class="cstat-no" title="statement not covered" >  priv(this, 'cache', new Map()) </span>// hash of items by key
+<span class="cstat-no" title="statement not covered" >  priv(this, 'lruList', new Yallist()) </span>// list of items in order of use recency
+<span class="cstat-no" title="statement not covered" >  priv(this, 'length', 0) </span>// length of items in the list
 }
 &nbsp;
-LRUCache.prototype.dump = <span class="fstat-no" title="function not covered">function () {</span>
-<span class="cstat-no" title="statement not covered">  return priv(this, 'lruList').map(<span class="fstat-no" title="function not covered">function (hit) {</span></span>
-<span class="cstat-no" title="statement not covered">    if (!isStale(this, hit)) {</span>
-<span class="cstat-no" title="statement not covered">      return {</span>
+LRUCache.prototype.dump = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >  return priv(this, 'lruList').map(<span class="fstat-no" title="function not covered" >function (hit) {</span></span>
+<span class="cstat-no" title="statement not covered" >    if (!isStale(this, hit)) {</span>
+<span class="cstat-no" title="statement not covered" >      return {</span>
         k: hit.key,
         v: hit.value,
         e: hit.now + (hit.maxAge || 0)
       }
     }
-  }, this).toArray().filter(<span class="fstat-no" title="function not covered">function (h) {</span>
-<span class="cstat-no" title="statement not covered">    return h</span>
+  }, this).toArray().filter(<span class="fstat-no" title="function not covered" >function (h) {</span>
+<span class="cstat-no" title="statement not covered" >    return h</span>
   })
 }
 &nbsp;
-LRUCache.prototype.dumpLru = <span class="fstat-no" title="function not covered">function () {</span>
-<span class="cstat-no" title="statement not covered">  return priv(this, 'lruList')</span>
+LRUCache.prototype.dumpLru = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >  return priv(this, 'lruList')</span>
 }
 &nbsp;
-LRUCache.prototype.inspect = <span class="fstat-no" title="function not covered">function (n, opts) {</span>
-<span class="cstat-no" title="statement not covered">  var str = 'LRUCache {'</span>
-<span class="cstat-no" title="statement not covered">  var extras = false</span>
+LRUCache.prototype.inspect = <span class="fstat-no" title="function not covered" >function (n, opts) {</span>
+<span class="cstat-no" title="statement not covered" >  var str = 'LRUCache {'</span>
+<span class="cstat-no" title="statement not covered" >  var extras = false</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">  var as = priv(this, 'allowStale')</span>
-<span class="cstat-no" title="statement not covered">  if (as) {</span>
-<span class="cstat-no" title="statement not covered">    str += '\n  allowStale: true'</span>
-<span class="cstat-no" title="statement not covered">    extras = true</span>
+<span class="cstat-no" title="statement not covered" >  var as = priv(this, 'allowStale')</span>
+<span class="cstat-no" title="statement not covered" >  if (as) {</span>
+<span class="cstat-no" title="statement not covered" >    str += '\n  allowStale: true'</span>
+<span class="cstat-no" title="statement not covered" >    extras = true</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered">  var max = priv(this, 'max')</span>
-<span class="cstat-no" title="statement not covered">  if (max &amp;&amp; max !== Infinity) {</span>
-<span class="cstat-no" title="statement not covered">    if (extras) {</span>
-<span class="cstat-no" title="statement not covered">      str += ','</span>
+<span class="cstat-no" title="statement not covered" >  var max = priv(this, 'max')</span>
+<span class="cstat-no" title="statement not covered" >  if (max &amp;&amp; max !== Infinity) {</span>
+<span class="cstat-no" title="statement not covered" >    if (extras) {</span>
+<span class="cstat-no" title="statement not covered" >      str += ','</span>
     }
-<span class="cstat-no" title="statement not covered">    str += '\n  max: ' + util.inspect(max, opts)</span>
-<span class="cstat-no" title="statement not covered">    extras = true</span>
+<span class="cstat-no" title="statement not covered" >    str += '\n  max: ' + util.inspect(max, opts)</span>
+<span class="cstat-no" title="statement not covered" >    extras = true</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered">  var maxAge = priv(this, 'maxAge')</span>
-<span class="cstat-no" title="statement not covered">  if (maxAge) {</span>
-<span class="cstat-no" title="statement not covered">    if (extras) {</span>
-<span class="cstat-no" title="statement not covered">      str += ','</span>
+<span class="cstat-no" title="statement not covered" >  var maxAge = priv(this, 'maxAge')</span>
+<span class="cstat-no" title="statement not covered" >  if (maxAge) {</span>
+<span class="cstat-no" title="statement not covered" >    if (extras) {</span>
+<span class="cstat-no" title="statement not covered" >      str += ','</span>
     }
-<span class="cstat-no" title="statement not covered">    str += '\n  maxAge: ' + util.inspect(maxAge, opts)</span>
-<span class="cstat-no" title="statement not covered">    extras = true</span>
+<span class="cstat-no" title="statement not covered" >    str += '\n  maxAge: ' + util.inspect(maxAge, opts)</span>
+<span class="cstat-no" title="statement not covered" >    extras = true</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered">  var lc = priv(this, 'lengthCalculator')</span>
-<span class="cstat-no" title="statement not covered">  if (lc &amp;&amp; lc !== naiveLength) {</span>
-<span class="cstat-no" title="statement not covered">    if (extras) {</span>
-<span class="cstat-no" title="statement not covered">      str += ','</span>
+<span class="cstat-no" title="statement not covered" >  var lc = priv(this, 'lengthCalculator')</span>
+<span class="cstat-no" title="statement not covered" >  if (lc &amp;&amp; lc !== naiveLength) {</span>
+<span class="cstat-no" title="statement not covered" >    if (extras) {</span>
+<span class="cstat-no" title="statement not covered" >      str += ','</span>
     }
-<span class="cstat-no" title="statement not covered">    str += '\n  length: ' + util.inspect(priv(this, 'length'), opts)</span>
-<span class="cstat-no" title="statement not covered">    extras = true</span>
+<span class="cstat-no" title="statement not covered" >    str += '\n  length: ' + util.inspect(priv(this, 'length'), opts)</span>
+<span class="cstat-no" title="statement not covered" >    extras = true</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered">  var didFirst = false</span>
-<span class="cstat-no" title="statement not covered">  priv(this, 'lruList').forEach(<span class="fstat-no" title="function not covered">function (item) {</span></span>
-<span class="cstat-no" title="statement not covered">    if (didFirst) {</span>
-<span class="cstat-no" title="statement not covered">      str += ',\n  '</span>
+<span class="cstat-no" title="statement not covered" >  var didFirst = false</span>
+<span class="cstat-no" title="statement not covered" >  priv(this, 'lruList').forEach(<span class="fstat-no" title="function not covered" >function (item) {</span></span>
+<span class="cstat-no" title="statement not covered" >    if (didFirst) {</span>
+<span class="cstat-no" title="statement not covered" >      str += ',\n  '</span>
     } else {
-<span class="cstat-no" title="statement not covered">      if (extras) {</span>
-<span class="cstat-no" title="statement not covered">        str += ',\n'</span>
+<span class="cstat-no" title="statement not covered" >      if (extras) {</span>
+<span class="cstat-no" title="statement not covered" >        str += ',\n'</span>
       }
-<span class="cstat-no" title="statement not covered">      didFirst = true</span>
-<span class="cstat-no" title="statement not covered">      str += '\n  '</span>
+<span class="cstat-no" title="statement not covered" >      didFirst = true</span>
+<span class="cstat-no" title="statement not covered" >      str += '\n  '</span>
     }
-<span class="cstat-no" title="statement not covered">    var key = util.inspect(item.key).split('\n').join('\n  ')</span>
-<span class="cstat-no" title="statement not covered">    var val = { value: item.value }</span>
-<span class="cstat-no" title="statement not covered">    if (item.maxAge !== maxAge) {</span>
-<span class="cstat-no" title="statement not covered">      val.maxAge = item.maxAge</span>
+<span class="cstat-no" title="statement not covered" >    var key = util.inspect(item.key).split('\n').join('\n  ')</span>
+<span class="cstat-no" title="statement not covered" >    var val = { value: item.value }</span>
+<span class="cstat-no" title="statement not covered" >    if (item.maxAge !== maxAge) {</span>
+<span class="cstat-no" title="statement not covered" >      val.maxAge = item.maxAge</span>
     }
-<span class="cstat-no" title="statement not covered">    if (lc !== naiveLength) {</span>
-<span class="cstat-no" title="statement not covered">      val.length = item.length</span>
+<span class="cstat-no" title="statement not covered" >    if (lc !== naiveLength) {</span>
+<span class="cstat-no" title="statement not covered" >      val.length = item.length</span>
     }
-<span class="cstat-no" title="statement not covered">    if (isStale(this, item)) {</span>
-<span class="cstat-no" title="statement not covered">      val.stale = true</span>
+<span class="cstat-no" title="statement not covered" >    if (isStale(this, item)) {</span>
+<span class="cstat-no" title="statement not covered" >      val.stale = true</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered">    val = util.inspect(val, opts).split('\n').join('\n  ')</span>
-<span class="cstat-no" title="statement not covered">    str += key + ' =&gt; ' + val</span>
+<span class="cstat-no" title="statement not covered" >    val = util.inspect(val, opts).split('\n').join('\n  ')</span>
+<span class="cstat-no" title="statement not covered" >    str += key + ' =&gt; ' + val</span>
   })
 &nbsp;
-<span class="cstat-no" title="statement not covered">  if (didFirst || extras) {</span>
-<span class="cstat-no" title="statement not covered">    str += '\n'</span>
+<span class="cstat-no" title="statement not covered" >  if (didFirst || extras) {</span>
+<span class="cstat-no" title="statement not covered" >    str += '\n'</span>
   }
-<span class="cstat-no" title="statement not covered">  str += '}'</span>
+<span class="cstat-no" title="statement not covered" >  str += '}'</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">  return str</span>
+<span class="cstat-no" title="statement not covered" >  return str</span>
 }
 &nbsp;
-LRUCache.prototype.set = <span class="fstat-no" title="function not covered">function (key, value, maxAge) {</span>
-<span class="cstat-no" title="statement not covered">  maxAge = maxAge || priv(this, 'maxAge')</span>
+LRUCache.prototype.set = <span class="fstat-no" title="function not covered" >function (key, value, maxAge) {</span>
+<span class="cstat-no" title="statement not covered" >  maxAge = maxAge || priv(this, 'maxAge')</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">  var now = maxAge ? Date.now() : 0</span>
-<span class="cstat-no" title="statement not covered">  var len = priv(this, 'lengthCalculator').call(this, value, key)</span>
+<span class="cstat-no" title="statement not covered" >  var now = maxAge ? Date.now() : 0</span>
+<span class="cstat-no" title="statement not covered" >  var len = priv(this, 'lengthCalculator').call(this, value, key)</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">  if (priv(this, 'cache').has(key)) {</span>
-<span class="cstat-no" title="statement not covered">    if (len &gt; priv(this, 'max')) {</span>
-<span class="cstat-no" title="statement not covered">      del(this, priv(this, 'cache').get(key))</span>
-<span class="cstat-no" title="statement not covered">      return false</span>
+<span class="cstat-no" title="statement not covered" >  if (priv(this, 'cache').has(key)) {</span>
+<span class="cstat-no" title="statement not covered" >    if (len &gt; priv(this, 'max')) {</span>
+<span class="cstat-no" title="statement not covered" >      del(this, priv(this, 'cache').get(key))</span>
+<span class="cstat-no" title="statement not covered" >      return false</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered">    var node = priv(this, 'cache').get(key)</span>
-<span class="cstat-no" title="statement not covered">    var item = node.value</span>
+<span class="cstat-no" title="statement not covered" >    var node = priv(this, 'cache').get(key)</span>
+<span class="cstat-no" title="statement not covered" >    var item = node.value</span>
 &nbsp;
     // dispose of the old one before overwriting
-<span class="cstat-no" title="statement not covered">    if (priv(this, 'dispose')) {</span>
-<span class="cstat-no" title="statement not covered">      priv(this, 'dispose').call(this, key, item.value)</span>
+<span class="cstat-no" title="statement not covered" >    if (priv(this, 'dispose')) {</span>
+<span class="cstat-no" title="statement not covered" >      priv(this, 'dispose').call(this, key, item.value)</span>
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered">    item.now = now</span>
-<span class="cstat-no" title="statement not covered">    item.maxAge = maxAge</span>
-<span class="cstat-no" title="statement not covered">    item.value = value</span>
-<span class="cstat-no" title="statement not covered">    priv(this, 'length', priv(this, 'length') + (len - item.length))</span>
-<span class="cstat-no" title="statement not covered">    item.length = len</span>
-<span class="cstat-no" title="statement not covered">    this.get(key)</span>
-<span class="cstat-no" title="statement not covered">    trim(this)</span>
-<span class="cstat-no" title="statement not covered">    return true</span>
+<span class="cstat-no" title="statement not covered" >    item.now = now</span>
+<span class="cstat-no" title="statement not covered" >    item.maxAge = maxAge</span>
+<span class="cstat-no" title="statement not covered" >    item.value = value</span>
+<span class="cstat-no" title="statement not covered" >    priv(this, 'length', priv(this, 'length') + (len - item.length))</span>
+<span class="cstat-no" title="statement not covered" >    item.length = len</span>
+<span class="cstat-no" title="statement not covered" >    this.get(key)</span>
+<span class="cstat-no" title="statement not covered" >    trim(this)</span>
+<span class="cstat-no" title="statement not covered" >    return true</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered">  var hit = new Entry(key, value, len, now, maxAge)</span>
+<span class="cstat-no" title="statement not covered" >  var hit = new Entry(key, value, len, now, maxAge)</span>
 &nbsp;
   // oversized objects fall out of cache automatically.
-<span class="cstat-no" title="statement not covered">  if (hit.length &gt; priv(this, 'max')) {</span>
-<span class="cstat-no" title="statement not covered">    if (priv(this, 'dispose')) {</span>
-<span class="cstat-no" title="statement not covered">      priv(this, 'dispose').call(this, key, value)</span>
+<span class="cstat-no" title="statement not covered" >  if (hit.length &gt; priv(this, 'max')) {</span>
+<span class="cstat-no" title="statement not covered" >    if (priv(this, 'dispose')) {</span>
+<span class="cstat-no" title="statement not covered" >      priv(this, 'dispose').call(this, key, value)</span>
     }
-<span class="cstat-no" title="statement not covered">    return false</span>
+<span class="cstat-no" title="statement not covered" >    return false</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered">  priv(this, 'length', priv(this, 'length') + hit.length)</span>
-<span class="cstat-no" title="statement not covered">  priv(this, 'lruList').unshift(hit)</span>
-<span class="cstat-no" title="statement not covered">  priv(this, 'cache').set(key, priv(this, 'lruList').head)</span>
-<span class="cstat-no" title="statement not covered">  trim(this)</span>
-<span class="cstat-no" title="statement not covered">  return true</span>
+<span class="cstat-no" title="statement not covered" >  priv(this, 'length', priv(this, 'length') + hit.length)</span>
+<span class="cstat-no" title="statement not covered" >  priv(this, 'lruList').unshift(hit)</span>
+<span class="cstat-no" title="statement not covered" >  priv(this, 'cache').set(key, priv(this, 'lruList').head)</span>
+<span class="cstat-no" title="statement not covered" >  trim(this)</span>
+<span class="cstat-no" title="statement not covered" >  return true</span>
 }
 &nbsp;
-LRUCache.prototype.has = <span class="fstat-no" title="function not covered">function (key) {</span>
-<span class="cstat-no" title="statement not covered">  if (!priv(this, 'cache').has(key)) <span class="cstat-no" title="statement not covered">return false</span></span>
-<span class="cstat-no" title="statement not covered">  var hit = priv(this, 'cache').get(key).value</span>
-<span class="cstat-no" title="statement not covered">  if (isStale(this, hit)) {</span>
-<span class="cstat-no" title="statement not covered">    return false</span>
+LRUCache.prototype.has = <span class="fstat-no" title="function not covered" >function (key) {</span>
+<span class="cstat-no" title="statement not covered" >  if (!priv(this, 'cache').has(key)) <span class="cstat-no" title="statement not covered" >return false</span></span>
+<span class="cstat-no" title="statement not covered" >  var hit = priv(this, 'cache').get(key).value</span>
+<span class="cstat-no" title="statement not covered" >  if (isStale(this, hit)) {</span>
+<span class="cstat-no" title="statement not covered" >    return false</span>
   }
-<span class="cstat-no" title="statement not covered">  return true</span>
+<span class="cstat-no" title="statement not covered" >  return true</span>
 }
 &nbsp;
-LRUCache.prototype.get = <span class="fstat-no" title="function not covered">function (key) {</span>
-<span class="cstat-no" title="statement not covered">  return get(this, key, true)</span>
+LRUCache.prototype.get = <span class="fstat-no" title="function not covered" >function (key) {</span>
+<span class="cstat-no" title="statement not covered" >  return get(this, key, true)</span>
 }
 &nbsp;
-LRUCache.prototype.peek = <span class="fstat-no" title="function not covered">function (key) {</span>
-<span class="cstat-no" title="statement not covered">  return get(this, key, false)</span>
+LRUCache.prototype.peek = <span class="fstat-no" title="function not covered" >function (key) {</span>
+<span class="cstat-no" title="statement not covered" >  return get(this, key, false)</span>
 }
 &nbsp;
-LRUCache.prototype.pop = <span class="fstat-no" title="function not covered">function () {</span>
-<span class="cstat-no" title="statement not covered">  var node = priv(this, 'lruList').tail</span>
-<span class="cstat-no" title="statement not covered">  if (!node) <span class="cstat-no" title="statement not covered">return null</span></span>
-<span class="cstat-no" title="statement not covered">  del(this, node)</span>
-<span class="cstat-no" title="statement not covered">  return node.value</span>
+LRUCache.prototype.pop = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >  var node = priv(this, 'lruList').tail</span>
+<span class="cstat-no" title="statement not covered" >  if (!node) <span class="cstat-no" title="statement not covered" >return null</span></span>
+<span class="cstat-no" title="statement not covered" >  del(this, node)</span>
+<span class="cstat-no" title="statement not covered" >  return node.value</span>
 }
 &nbsp;
-LRUCache.prototype.del = <span class="fstat-no" title="function not covered">function (key) {</span>
-<span class="cstat-no" title="statement not covered">  del(this, priv(this, 'cache').get(key))</span>
+LRUCache.prototype.del = <span class="fstat-no" title="function not covered" >function (key) {</span>
+<span class="cstat-no" title="statement not covered" >  del(this, priv(this, 'cache').get(key))</span>
 }
 &nbsp;
-LRUCache.prototype.load = <span class="fstat-no" title="function not covered">function (arr) {</span>
+LRUCache.prototype.load = <span class="fstat-no" title="function not covered" >function (arr) {</span>
   // reset the cache
-<span class="cstat-no" title="statement not covered">  this.reset()</span>
+<span class="cstat-no" title="statement not covered" >  this.reset()</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">  var now = Date.now()</span>
+<span class="cstat-no" title="statement not covered" >  var now = Date.now()</span>
   // A previous serialized cache has the most recent items first
-<span class="cstat-no" title="statement not covered">  for (var l = arr.length - 1; l &gt;= 0; l--) {</span>
-<span class="cstat-no" title="statement not covered">    var hit = arr[l]</span>
-<span class="cstat-no" title="statement not covered">    var expiresAt = hit.e || 0</span>
-<span class="cstat-no" title="statement not covered">    if (expiresAt === 0) {</span>
+<span class="cstat-no" title="statement not covered" >  for (var l = arr.length - 1; l &gt;= 0; l--) {</span>
+<span class="cstat-no" title="statement not covered" >    var hit = arr[l]</span>
+<span class="cstat-no" title="statement not covered" >    var expiresAt = hit.e || 0</span>
+<span class="cstat-no" title="statement not covered" >    if (expiresAt === 0) {</span>
       // the item was created without expiration in a non aged cache
-<span class="cstat-no" title="statement not covered">      this.set(hit.k, hit.v)</span>
+<span class="cstat-no" title="statement not covered" >      this.set(hit.k, hit.v)</span>
     } else {
-<span class="cstat-no" title="statement not covered">      var maxAge = expiresAt - now</span>
+<span class="cstat-no" title="statement not covered" >      var maxAge = expiresAt - now</span>
       // dont add already expired items
-<span class="cstat-no" title="statement not covered">      if (maxAge &gt; 0) {</span>
-<span class="cstat-no" title="statement not covered">        this.set(hit.k, hit.v, maxAge)</span>
+<span class="cstat-no" title="statement not covered" >      if (maxAge &gt; 0) {</span>
+<span class="cstat-no" title="statement not covered" >        this.set(hit.k, hit.v, maxAge)</span>
       }
     }
   }
 }
 &nbsp;
-LRUCache.prototype.prune = <span class="fstat-no" title="function not covered">function () {</span>
-<span class="cstat-no" title="statement not covered">  var self = this</span>
-<span class="cstat-no" title="statement not covered">  priv(this, 'cache').forEach(<span class="fstat-no" title="function not covered">function (value, key) {</span></span>
-<span class="cstat-no" title="statement not covered">    get(self, key, false)</span>
+LRUCache.prototype.prune = <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >  var self = this</span>
+<span class="cstat-no" title="statement not covered" >  priv(this, 'cache').forEach(<span class="fstat-no" title="function not covered" >function (value, key) {</span></span>
+<span class="cstat-no" title="statement not covered" >    get(self, key, false)</span>
   })
 }
 &nbsp;
-<span class="fstat-no" title="function not covered">function get (self, key, doUse) {</span>
-<span class="cstat-no" title="statement not covered">  var node = priv(self, 'cache').get(key)</span>
-<span class="cstat-no" title="statement not covered">  if (node) {</span>
-<span class="cstat-no" title="statement not covered">    var hit = node.value</span>
-<span class="cstat-no" title="statement not covered">    if (isStale(self, hit)) {</span>
-<span class="cstat-no" title="statement not covered">      del(self, node)</span>
-<span class="cstat-no" title="statement not covered">      if (!priv(self, 'allowStale')) <span class="cstat-no" title="statement not covered">hit = undefined</span></span>
+<span class="fstat-no" title="function not covered" >function get (self, key, doUse) {</span>
+<span class="cstat-no" title="statement not covered" >  var node = priv(self, 'cache').get(key)</span>
+<span class="cstat-no" title="statement not covered" >  if (node) {</span>
+<span class="cstat-no" title="statement not covered" >    var hit = node.value</span>
+<span class="cstat-no" title="statement not covered" >    if (isStale(self, hit)) {</span>
+<span class="cstat-no" title="statement not covered" >      del(self, node)</span>
+<span class="cstat-no" title="statement not covered" >      if (!priv(self, 'allowStale')) <span class="cstat-no" title="statement not covered" >hit = undefined</span></span>
     } else {
-<span class="cstat-no" title="statement not covered">      if (doUse) {</span>
-<span class="cstat-no" title="statement not covered">        priv(self, 'lruList').unshiftNode(node)</span>
+<span class="cstat-no" title="statement not covered" >      if (doUse) {</span>
+<span class="cstat-no" title="statement not covered" >        priv(self, 'lruList').unshiftNode(node)</span>
       }
     }
-<span class="cstat-no" title="statement not covered">    if (hit) <span class="cstat-no" title="statement not covered">hit = hit.value</span></span>
+<span class="cstat-no" title="statement not covered" >    if (hit) <span class="cstat-no" title="statement not covered" >hit = hit.value</span></span>
   }
-<span class="cstat-no" title="statement not covered">  return hit</span>
+<span class="cstat-no" title="statement not covered" >  return hit</span>
 }
 &nbsp;
-<span class="fstat-no" title="function not covered">function isStale (self, hit) {</span>
-<span class="cstat-no" title="statement not covered">  if (!hit || (!hit.maxAge &amp;&amp; !priv(self, 'maxAge'))) {</span>
-<span class="cstat-no" title="statement not covered">    return false</span>
+<span class="fstat-no" title="function not covered" >function isStale (self, hit) {</span>
+<span class="cstat-no" title="statement not covered" >  if (!hit || (!hit.maxAge &amp;&amp; !priv(self, 'maxAge'))) {</span>
+<span class="cstat-no" title="statement not covered" >    return false</span>
   }
-<span class="cstat-no" title="statement not covered">  var stale = false</span>
-<span class="cstat-no" title="statement not covered">  var diff = Date.now() - hit.now</span>
-<span class="cstat-no" title="statement not covered">  if (hit.maxAge) {</span>
-<span class="cstat-no" title="statement not covered">    stale = diff &gt; hit.maxAge</span>
+<span class="cstat-no" title="statement not covered" >  var stale = false</span>
+<span class="cstat-no" title="statement not covered" >  var diff = Date.now() - hit.now</span>
+<span class="cstat-no" title="statement not covered" >  if (hit.maxAge) {</span>
+<span class="cstat-no" title="statement not covered" >    stale = diff &gt; hit.maxAge</span>
   } else {
-<span class="cstat-no" title="statement not covered">    stale = priv(self, 'maxAge') &amp;&amp; (diff &gt; priv(self, 'maxAge'))</span>
+<span class="cstat-no" title="statement not covered" >    stale = priv(self, 'maxAge') &amp;&amp; (diff &gt; priv(self, 'maxAge'))</span>
   }
-<span class="cstat-no" title="statement not covered">  return stale</span>
+<span class="cstat-no" title="statement not covered" >  return stale</span>
 }
 &nbsp;
-<span class="fstat-no" title="function not covered">function trim (self) {</span>
-<span class="cstat-no" title="statement not covered">  if (priv(self, 'length') &gt; priv(self, 'max')) {</span>
-<span class="cstat-no" title="statement not covered">    for (var walker = priv(self, 'lruList').tail;</span>
+<span class="fstat-no" title="function not covered" >function trim (self) {</span>
+<span class="cstat-no" title="statement not covered" >  if (priv(self, 'length') &gt; priv(self, 'max')) {</span>
+<span class="cstat-no" title="statement not covered" >    for (var walker = priv(self, 'lruList').tail;</span>
          priv(self, 'length') &gt; priv(self, 'max') &amp;&amp; walker !== null;) {
       // We know that we're about to delete this one, and also
       // what the next least recently used key will be, so just
       // go ahead and set it now.
-<span class="cstat-no" title="statement not covered">      var prev = walker.prev</span>
-<span class="cstat-no" title="statement not covered">      del(self, walker)</span>
-<span class="cstat-no" title="statement not covered">      walker = prev</span>
+<span class="cstat-no" title="statement not covered" >      var prev = walker.prev</span>
+<span class="cstat-no" title="statement not covered" >      del(self, walker)</span>
+<span class="cstat-no" title="statement not covered" >      walker = prev</span>
     }
   }
 }
 &nbsp;
-<span class="fstat-no" title="function not covered">function del (self, node) {</span>
-<span class="cstat-no" title="statement not covered">  if (node) {</span>
-<span class="cstat-no" title="statement not covered">    var hit = node.value</span>
-<span class="cstat-no" title="statement not covered">    if (priv(self, 'dispose')) {</span>
-<span class="cstat-no" title="statement not covered">      priv(self, 'dispose').call(this, hit.key, hit.value)</span>
+<span class="fstat-no" title="function not covered" >function del (self, node) {</span>
+<span class="cstat-no" title="statement not covered" >  if (node) {</span>
+<span class="cstat-no" title="statement not covered" >    var hit = node.value</span>
+<span class="cstat-no" title="statement not covered" >    if (priv(self, 'dispose')) {</span>
+<span class="cstat-no" title="statement not covered" >      priv(self, 'dispose').call(this, hit.key, hit.value)</span>
     }
-<span class="cstat-no" title="statement not covered">    priv(self, 'length', priv(self, 'length') - hit.length)</span>
-<span class="cstat-no" title="statement not covered">    priv(self, 'cache').delete(hit.key)</span>
-<span class="cstat-no" title="statement not covered">    priv(self, 'lruList').removeNode(node)</span>
+<span class="cstat-no" title="statement not covered" >    priv(self, 'length', priv(self, 'length') - hit.length)</span>
+<span class="cstat-no" title="statement not covered" >    priv(self, 'cache').delete(hit.key)</span>
+<span class="cstat-no" title="statement not covered" >    priv(self, 'lruList').removeNode(node)</span>
   }
 }
 &nbsp;
 // classy, since V8 prefers predictable objects.
-<span class="fstat-no" title="function not covered">function Entry (key, value, length, now, maxAge) {</span>
-<span class="cstat-no" title="statement not covered">  this.key = key</span>
-<span class="cstat-no" title="statement not covered">  this.value = value</span>
-<span class="cstat-no" title="statement not covered">  this.length = length</span>
-<span class="cstat-no" title="statement not covered">  this.now = now</span>
-<span class="cstat-no" title="statement not covered">  this.maxAge = maxAge || 0</span>
+<span class="fstat-no" title="function not covered" >function Entry (key, value, length, now, maxAge) {</span>
+<span class="cstat-no" title="statement not covered" >  this.key = key</span>
+<span class="cstat-no" title="statement not covered" >  this.value = value</span>
+<span class="cstat-no" title="statement not covered" >  this.length = length</span>
+<span class="cstat-no" title="statement not covered" >  this.now = now</span>
+<span class="cstat-no" title="statement not covered" >  this.maxAge = maxAge || 0</span>
 }
 &nbsp;
 &nbsp;</pre></td></tr>
-</tbody></table></pre>
+</table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 11 2017 08:09:29 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Sun Apr 16 2017 08:58:15 GMT+0000 (UTC)</div>
 </div>
-
-
-</body></html>
+</body>
+</html>
