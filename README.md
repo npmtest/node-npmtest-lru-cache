@@ -1,4 +1,7 @@
-# test coverage for  [lru-cache (v4.0.2)](https://github.com/isaacs/node-lru-cache#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-lru-cache.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-lru-cache) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-lru-cache.svg)](https://travis-ci.org/npmtest/node-npmtest-lru-cache)
+# npmtest-lru-cache
+
+#### test coverage for  [lru-cache (v4.0.2)](https://github.com/isaacs/node-lru-cache#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-lru-cache.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-lru-cache) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-lru-cache.svg)](https://travis-ci.org/npmtest/node-npmtest-lru-cache)
+
 #### A cache object that deletes the least-recently-used items.
 
 [![NPM](https://nodei.co/npm/lru-cache.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/lru-cache)
@@ -9,9 +12,15 @@
 | test-report : | [![test-report](https://npmtest.github.io/node-npmtest-lru-cache/build/test-report.badge.svg)](https://npmtest.github.io/node-npmtest-lru-cache/build/test-report.html)|
 | build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-lru-cache/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-lru-cache/tree/gh-pages/build)|
 
+- [https://npmtest.github.io/node-npmtest-lru-cache/build/coverage.html/index.html](https://npmtest.github.io/node-npmtest-lru-cache/build/coverage.html/index.html)
+
 [![istanbul-coverage](https://npmtest.github.io/node-npmtest-lru-cache/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fcoverage.lib.html.png)](https://npmtest.github.io/node-npmtest-lru-cache/build/coverage.html/index.html)
 
+- [https://npmtest.github.io/node-npmtest-lru-cache/build/test-report.html](https://npmtest.github.io/node-npmtest-lru-cache/build/test-report.html)
+
 [![test-report](https://npmtest.github.io/node-npmtest-lru-cache/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Ftest-report.html.png)](https://npmtest.github.io/node-npmtest-lru-cache/build/test-report.html)
+
+- [https://npmdoc.github.io/node-npmdoc-lru-cache/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-lru-cache/build/apidoc.html)
 
 [![apidoc](https://npmdoc.github.io/node-npmdoc-lru-cache/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-lru-cache/build/apidoc.html)
 
